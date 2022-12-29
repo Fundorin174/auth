@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import "src/styles/variables";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: $background-root;
+}
+.container {
+  position: relative;
+  max-width: 430px;
+  width: 100%;
+  background: $main-white;
+  border-radius: 10px;
+  box-shadow: $main-box-shadow;
+  overflow: hidden;
+  margin: 0 20px;
+  .forms {
+    display: flex;
+    align-items: center;
+    height: 440px;
+    width: 200%;
+    transition: height 0.2s ease;
+  }
+
+  .form {
+    width: 50%;
+    padding: 30px;
+    background-color: $main-white;
+    transition: margin-left 0.18s ease;
+    .title {
+      position: relative;
+      font-size: $font-title;
+      font-weight: 600;
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 30px;
+        background-color: $main-blue;
+        border-radius: 25px;
+      }
+    }
+    .inputField {
+      position: relative;
+      height: 50px;
+      width: 100%;
+      margin-top: 30px;
+      input {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        padding: 0 35px;
+        border: none;
+        outline: none;
+        font-size: $font-input;
+        border-bottom: 2px solid #ccc;
+        border-top: 2px solid transparent;
+        transition: all 0.2s ease;
+        &:is(:focus, :valid) {
+          border-bottom-color: $main-blue;
+        }
+        &:is(:focus, :valid) ~ svg {
+          color: $main-blue;
+        }
+      }
+      svg {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #999;
+        font-size: $font-svg;
+        transition: all 0.2s ease;
+      }
+      .icon {
+        left: 0;
+      }
+      .showHidePw {
+        right: 0;
+        cursor: pointer;
+      }
+      .validationText {
+        position: absolute;
+        top: 50px;
+        color: $color-error;
+        font-size: $font-text-mini;
+        span {
+          margin-right: 2px;
+        }
+      }
+    }
+    .checkboxText {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+      .checkboxContent{
+        display: flex;
+        align-items: center;
+        input{
+          margin-right: 10px;
+          accent-color: $main-blue;
+        }
+      }
+    }
+    .textLink {
+      margin-left: 10px;
+      &:hover{
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      .text{
+        color: $main-blue;
+        text-decoration: none;
+      }
+    }
+    .text{
+      color: #333;
+      font-size: $font-text;
+    }
+    .button{
+      margin-top: 35px;
+      input{
+        border: none;
+        color: $main-white;
+        font-size: $font-btn;
+        font-weight: 500;
+        letter-spacing: 1px;
+        border-radius: 6px;
+        background-color: $main-blue;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        &:hover{
+          background-color: $secondary-blue;
+        }
+        &:disabled {
+          background-color: $background-disabled;
+          cursor: not-allowed;
+        }
+      }
+    }
+    .loginSignup{
+      margin-top: 30px;
+      text-align: center;
+    }
+    }
+  .active.login {
+    margin-left: -50%;
+    opacity: 0;
+    transition: margin-left 0.18s ease, opacity 0.15s ease;
+  }
+  .active.signup {
+    opacity: 1;
+    transition: opacity 0.2s ease;
+  }
+  .active.forms {
+    height: 645px;
+  }
+  .signup {
+    opacity: 0;
+    transition: opacity 0.09s ease;
+  }
+}
+
