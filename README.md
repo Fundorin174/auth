@@ -6,7 +6,7 @@
 - New user registration
 - Authorization of a registered user (login)
 - Automatic login of a previously registered user (refresh token is stored for 30 days)
-- Frontend and backend validation
+- Frontend and backend validation (empty field, max/min length, confirm password, email)
 - Automatic access token update by refresh token
 - Auth guard
 - Activation of a new user by mail (the service is implemented, but not activated, currently new users are activated automatically)
@@ -29,7 +29,7 @@
 - pg
 
 #### Database:
-- postgresql ()
+- postgresql
 - pgAdmin
 
 ### Installation:
