@@ -63,7 +63,7 @@ export const checkAuth = () => async (dispatch: AppDispatch) => {
     dispatch(authSlice.actions.onSuccess(response.data.user))//save user
     dispatch(authSlice.actions.setAuth(true));//set flag
   }catch (error: any) {
-    dispatch(authSlice.actions.onError(error.response?.data?.message));
+    console.log(error.response?.data?.message)
   }
 }
 
