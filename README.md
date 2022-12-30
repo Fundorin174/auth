@@ -42,6 +42,6 @@
 For clarity, several users have already been initiated in the database.
 If you do not want to create your own, you can login as a test user: email: test@test.test, password: test
 
-![alt text](https://github.com/Fundorin174/auth/main/tools/login.jpg)
+![Login Form](https://github.com/Fundorin174/auth/raw/main/tools/login.jpg)
 
-![alt text](https://github.com/Fundorin174/auth/main/tools/signup.jpg)
+![Signup form](https://github.com/Fundorin174/auth/raw/main/tools/signup.jpg)
