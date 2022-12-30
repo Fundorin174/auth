@@ -20,7 +20,7 @@ const Users: FC = memo(() => {
     <div>
       {isLoading && <div>Loading</div>}
       {error && <div>{error}</div>}
-      {isAuth && <h2>{`Пользователь: ${user.name} ${user.surname}`}</h2>}
+      {isAuth && <h2>{`Current User: ${user.name} ${user.surname}`}</h2>}
       {users &&
           <table className={styles.table}>
               <thead>
